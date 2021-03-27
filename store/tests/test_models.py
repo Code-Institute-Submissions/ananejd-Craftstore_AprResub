@@ -16,12 +16,17 @@ class TestCategoriesModel(TestCase):
 
     def test_category_model_entry(self):
         """
-        Test Category model defaul name
+        Test Category model default name
         """
         data = self.data1
-        self.assertEqual(str(data), 'django')
+        self.assertEqual(str(data), 'beads')
 
 
 class TestProductsModel(TestCase):
     def setUp(self):
-        Category.objects.create(name='django', slug='django')
+       Category.objects.create(name='beads', slug='beads')
+        User.objects.create(username='admin')
+        self.data1 = Product.objects.create(category_id=1, title='beads_bag', created_by_id=1,
+                                            slug='beads_bag', price='20.00', image='beads')
+        self.data2 = Product.products.create(category_id=1, title='django wallet', created_by_id=1,
+                                             slug='django-wallet', price='20.00', image='beads', is_active=False)
