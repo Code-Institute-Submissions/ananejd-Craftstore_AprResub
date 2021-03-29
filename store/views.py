@@ -6,7 +6,7 @@ from .models import Category, Product
 # Create your views here.
 
 
-def all_products(request):
+def product_all(request):
     products = Product.products.all()
     return render(request, 'store/home.html', {'products': products})
 
