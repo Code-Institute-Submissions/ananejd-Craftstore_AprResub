@@ -48,14 +48,14 @@ class TestViewResponses(TestCase):
         request = HttpRequest()
         response = product_all(request)
         html = response.content.decode('utf8')
-        self.assertIn('<title>Home</title>', html)
+        self.assertIn('<title>CraftStore</title>', html)
         self.assertTrue(html.startswith('\n<!DOCTYPE html>\n'))
         self.assertEqual(response.status_code, 200)
 
     def test_view_function(self):
-        request = self.factory.get('/item/beads_bag')
+        request = self.factory.get('/beads_bag')
         response = product_all(request)
         html = response.content.decode('utf8')
-        self.assertIn('<title>Home</title>', html)
+        self.assertIn('<title>CraftStore</title>', html)
         self.assertTrue(html.startswith('\n<!DOCTYPE html>\n'))
         self.assertEqual(response.status_code, 200)

@@ -7,7 +7,7 @@ from store.models import Category, Product
 class TestCategoriesModel(TestCase):
 
     def setUp(self):
-        self.data1 = Category.objects.create(name='django', slug='django')
+        self.data1 = Category.objects.create(name='beads', slug='beads')
 
     def test_category_model_entry(self):
         data = self.data1
