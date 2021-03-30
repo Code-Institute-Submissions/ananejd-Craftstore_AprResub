@@ -20,7 +20,7 @@ SECRET_KEY = '4tz701&q84kw1j@_^cx2*92exrua1)$lrl&305-%32gdxb5ghg'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['yourdomain.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['https://git.heroku.com/craftstore-app.git']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
