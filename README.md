@@ -1,44 +1,53 @@
 # CRAFTSTORE
+## Full Stack Framework with Django
 
-The project is a database-driven Ecommerce shop for indiginous Ghanaian Hand made crafts. The ecommerce shop was written in python
-with the aide of the Django framework. The project utilises SQL/SQL3 as database.
+![Mockup]()
 
-The project allows a user to view a collection of hand-made crafts under various categories, whiles reviewing their prices 
-and moving desired items to the basket for payment.
-
-## Demo 
-<hr>
-Find a live version <a href=""http://ami.responsivedesign.is/?url=https:///gh-recipes.herokuapp.com/"">here</a>
 
 ![]()
+
+The project is a Database-driven Ecommerce shop for indiginous Ghanaian Hand made crafts.
+The project allows a user to view a collection of hand-made crafts under various categories, whiles reviewing their prices 
+and moving desired items to the basket where payment can be made.
+
+<hr>
+Find a live version <a href="http://ami.responsivedesign.is/?url=https:///gh-recipes.herokuapp.com/">here</a>
 
 
 ## UX Design
 
-My design was inspired by [the site builder report website](https://www.sitebuilderreport.com/inspiration/food-websites), 
-which is basically a collection of website design. The design is intended to display a few handcrafted artifacts on the homepage
+My design was inspired by the youtube channel called <a href="https://www.youtube.com/c/veryacademy/videos">Very Academy</a>, 
+which basically teaches programming to their subscribers. The design is intended to display a few handcrafted artifacts on the homepage
 to attract a users attention and at the same time inviting their curiosity to explore the site further by way of viewing 
 other crafts instore.
 Upon the completion of all functionalities, Users of the website should be able to set up accounts, read about the various crafts they see, 
 select the individual products as well as move them into the basket where they could be paid for. Users should also be able to remove 
 products from the basket if they are no longer interested in the craft.
 
-The home page displays the navigation bar with the brand of GH-RECIPES on the left of the page
-and four navigational icons on the right of the page. Immediately below that is a display imge of 
-a ghanaian dish which a welcome inscription to the user. This is followed by a display of recipes in 
-the body and finally a footer displaying the developer involved in the project
+##Scope
+A MVP (minimum viable product) includes:
 
-The recipe page displays a list of recipes for which upon full completion of the project users 
-will be fully able to create, Read, Update and Delete recipes as they wish.
+- landing page displaying a few crafts
+- A library button acting as a dropdown menu for various categoris of crafts
+- A basket button 
+- A section giving an overview of crafts available on the site
 
-The Login navigational icon allows regualar users to get back into their profile 
-to fully access their previous activities on the page as well as create new ones.
+### User stories
 
-The sign up icon permits new users to establish a profile on the page.
-
-To return to the home-page a user simply clicks the Logo which is a common convention in programming,
-I also added a home button alongside the logo to make this clearer. The back to the top button at 
-the bottom right of the home page allows users to navigate easily by way of a click to the navigation bar.
+**ID** | **As a/an** | **I want to be able to...** | **So that I can**
+--- | --- | --- | ---
+1 | Site User | Register to the site | Log in to my account 
+2 | Site User | Log In and Log Out | View my profile
+3 | Site User | Receive email confirmation | Confirm successful registration
+4 | Site User | Have a user profile | View my purchases, and be able to check my order history
+5 | Potential customer | View some crafts | Select to purchase
+6 | Potential customer | View details of the craft | See price and description
+7 | Potential customer | Pay for the craft i like | Buy
+8 | Customer | View craft in my bag | Check the cost to review
+9 | Customer | Enter payment information and see that process is secure | Checkout without issues
+11 | Administrator | Add new catergory of crafts | To make them visible to customer
+12 | Administrator | Edit or update various categories | To change a pric and/or description 
+13 | Administrator | Delete a category of craft | To remove from a site
 
 ## Features
 
@@ -47,34 +56,27 @@ the bottom right of the home page allows users to navigate easily by way of a cl
 the home feature is intended to be a showcase of recipes visitors to the site will be able to to 
 click on and read about. It also offers users links to other functionalities of the site
 
-### Recipe
+### Library
 
-It is intended that users read, add and make changes to recipes on display using this icon. it offers a 
-link to the data store.
+The library icon when clicked on exposes the Category of crafts available on the site
 
-### Log in
+### Basket
 
-previous users of the website can assess their previous activities by loging in. Thereupon they can 
-proceed to contribute to the data in store.
+The basket button on the right side of the navigation bar is meant to hold a list of items 
+that have been reviewed by the site user awaiting payment.
 
-#### Add Recipe
+### Wireframes
 
-Upon a successful log in, users can proceed to acess the Add Recipe functionality of the page by clicking 
-and keying in information they require.
+- Home Page
 
-### Signup
+    <details><summary>Desktop (click to view)</summary>
 
-For new users of the site, the signup icon offers them the ability to sign up and offer their contribution 
-to the recipe store available.
-
-#### Edit Recipe
-
-A user is able to make edits to recipes found on the website. MongoDB allocates
-each entry into a collection with an object ID and this is what is used to 
-locate the individual recipe the user wants to edit and pre-fill the form
-for the user. After the user has made the necessary changes they submit the form
-and MongoDB's update() method to update the recipe.
-
+    ![](<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9eOMIaCWLS6u7WBXtREDNX%2Fcraftstore%3Fnode-id%3D1%253A27" allowfullscreen></iframe>)
+    </details>
+    <details><summary>Alternatively (click to view)</summary>
+    
+    ![](static/images/Wireframe.png)
+    </details>
 ## Technologies Used
 
 - Python 3.8.8
@@ -84,7 +86,7 @@ and MongoDB's update() method to update the recipe.
 - JavaScript
 - CSS
 - HTML
-- 
+- figma for wireframing
 
 ## Testing
 
@@ -117,17 +119,44 @@ occuring (such as fields going missing or name clashes causing issues)
 
 ## Database Schema
 
-The database is structured with 5 collections, recipes  The two
-collections are related as recipes contains a 'cuisine name' key that
-corresponds the cuisine documents.
+Database contains 3 table:
+- user
+- categories
+- products
 
-The recipes document itself contains unstuctured data. With key/value pairs
-that make up a description of the recipe. The ingredient name, quantity and
-value all have the same number within the key, and they are grouped through the
-use of sorting by number and sliced for data representation.
+I use Django default databases SQLite in gitpod environment and PostgreSQL database with Heroku as production enviroment.
 
-An example of a recipe document can be found in static/images/doc_example.png
+<details><summary>Database schema (click to view)</summary>
 
+![](static/images/database.png)
+
+</details>
+
+<details><summary>User table: (click to view)</summary>
+
+| UserName | Email Address | First Name| Last Name |
+:-------------:|:----------------:---------:-------:
+
+</details>
+
+<details><summary>User table for packages app: (click to view)</summary>
+
+- #### Category:
+
+<details><summary> Categories table: (click to view)</summary>
+
+| Name | Slug | 
+:------:|:--------:
+Fibrics| fibrics
+Woodworks | woodwork
+beads | beads
+
+</details>
+
+### Security
+
+All sensitive access keys are stored as `Config Vars` on Heroku cloud application platform.
+Django allauth was used to meet security requirements.
 
 ## Deployment
 This project was built using Python 3.8.6 and Flask 1.1.2.
@@ -147,4 +176,4 @@ expected time frame. He however hopes to bring the project to completion in due 
 1. Git ignore file was adopted from www.toptal.com/developers/gitignore/api
 1. Appreciation goes to the code institute student support team for being very supportive throughout my period
    study with the code institute
-1. Im grateful to my Seun Owonikonkon for her time.
+1. Im grateful to my mentor Seun Owonikoko for her time.
