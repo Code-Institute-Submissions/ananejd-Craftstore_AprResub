@@ -4,7 +4,6 @@
 ![Mockup]()
 
 
-![]()
 
 The project is a Database-driven Ecommerce shop for indiginous Ghanaian Hand made crafts.
 The project allows a user to view a collection of hand-made crafts under various categories, whiles reviewing their prices 
@@ -87,35 +86,6 @@ that have been reviewed by the site user awaiting payment.
 - CSS
 - HTML
 - figma for wireframing
-
-## Testing
-
-#### Testing Add Recipe Form
-
-- Test that a new added recipe immediately appears on the website's homepage
-- Go to form and try to submit empty fields and make sure WTForms 
-InputRequired() is working
-- Try to submit an empty ingredients list and make sure in-line validation is
-working
-- Try to submit a value in the Image URL field that is not a valid URL to make
-sure the custom JavaScript validator is working
-- Ensure that the random number JS function for upvotes is being created when 
-adding new recipe.
-- Making sure that the select fields are being populated with all of the 
-correct choices
-- Ensure that the removal of newly created rows for ingredients/preparation
-steps is possible and make sure that all of the rows are unable to be deleted
-with feedback for user if they try.
-
-#### Testing Edit Recipe Form
-
-- Make sure that the form is being populated with the correct data from the
-MongoDB document when editing recipe.
-- Ensure that adding/removing ingredient/preparation step rows is not causing
-an issue with clashing names when submitted
-- Ensure a recipe is able to be updated more than once without any bugs
-occuring (such as fields going missing or name clashes causing issues)
-- Test that the select fields are producing the correct options.
 
 ## Database Schema
 

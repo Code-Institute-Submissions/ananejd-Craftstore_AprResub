@@ -16,11 +16,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = '4tz701&q84kw1j@_^cx2*92exrua1)$lrl&305-%32gdxb5ghg'
+SECRET_KEY = os.environ.get('SECRET_KEY', '4tz701&q84kw1j@_^cx2*92exrua1)$lrl&305-%32gdxb5ghg')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://git.heroku.com/craftstore-app.git']
+ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -73,7 +73,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://qnuyfovbogjvkz:0211bdb31e197d98e1c1a883e7933664931300f0f311a30d2fb59d1a2fabe40c@ec2-52-21-153-207.compute-1.amazonaws.com:5432/d8tck84naan94q')
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 AUTH_PASSWORD_VALIDATORS = [
