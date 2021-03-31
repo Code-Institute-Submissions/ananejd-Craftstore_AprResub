@@ -97,9 +97,7 @@ Database contains 3 table:
 I use Django default databases SQLite in gitpod environment and PostgreSQL database with Heroku as production enviroment.
 
 <details><summary>Database schema (click to view)</summary>
-
-![](static/images/database.png)
-
+<img src="static/images/database.png">
 </details>
 
 <details><summary>User table: (click to view)</summary>

@@ -22,7 +22,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '4tz701&q84kw1j@_^cx2*92exrua1)$lrl&30
 
 DEBUG = development
 
-ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
+ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME'), 'localhost']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -70,8 +70,8 @@ WSGI_APPLICATION = 'core.wsgi.application'
 if development:
     DATABASES = {
         'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
 else:
