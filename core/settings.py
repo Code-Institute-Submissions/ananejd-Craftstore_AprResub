@@ -19,7 +19,7 @@ development = os.environ.get('DEVELOPMENT', False)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get('SECRET_KEY', '4tz701&q84kw1j@_^cx2*92exrua1)$lrl&305-%32gdxb5ghg')
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 DEBUG = development
 
