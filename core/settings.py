@@ -22,7 +22,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '4tz701&q84kw1j@_^cx2*92exrua1)$lrl&30
 
 DEBUG = development
 
-ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME'), 'localhost']
+ALLOWED_HOSTS = ['craftstore-app.herokuapp.com/', 'localhost']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
