@@ -1,4 +1,3 @@
-{% load static %}
 from decimal import Decimal
 
 from store.models import Product
@@ -50,3 +49,14 @@ class Basket():
         Get the basket data and count the qty of items
         """
         return sum(item['qty'] for item in self.basket.values())
+
+    def delete(self, product):
+        """
+        Delete item from session data
+        """
+        product_id = str(product)
+
+        if product_id in self.basket:
+            del self.basket[product_id]
+            print(product_id)
+            self.save()

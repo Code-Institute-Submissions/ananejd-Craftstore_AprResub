@@ -1,8 +1,6 @@
 # CRAFTSTORE
 ## Full Stack Framework with Django
 
-![Mockup]()
-
 
 
 The project is a Database-driven Ecommerce shop for indiginous Ghanaian Hand made crafts.
@@ -10,7 +8,7 @@ The project allows a user to view a collection of hand-made crafts under various
 and moving desired items to the basket where payment can be made.
 
 <hr>
-Find a live version <a href="http://ami.responsivedesign.is/?url=https:///gh-recipes.herokuapp.com/">here</a>
+Find a live version <a href="http://ami.responsivedesign.is/?url=https://craftstore-app.herokuapp.com/">here</a>
 
 
 ## UX Design
@@ -96,30 +94,6 @@ Database contains 3 table:
 
 I use Django default databases SQLite in gitpod environment and PostgreSQL database with Heroku as production enviroment.
 
-<details><summary>Database schema (click to view)</summary>
-<img src="static/images/database.png">
-</details>
-
-<details><summary>User table: (click to view)</summary>
-
-| UserName | Email Address | First Name| Last Name |
-:-------------:|:----------------:---------:-------:
-
-</details>
-
-<details><summary>User table for packages app: (click to view)</summary>
-
-- #### Category:
-
-<details><summary> Categories table: (click to view)</summary>
-
-| Name | Slug | 
-:------:|:--------:
-Fibrics| fibrics
-Woodworks | woodwork
-beads | beads
-
-</details>
 
 ### Security
 
@@ -132,11 +106,13 @@ This project was built using Python 3.8.6 and Flask 1.1.2.
 1. created requirements.txt that Heroku knows which packages are required for the application to run and install them.
 1. created Procfile that Heroku knows what kind of application this is.
 1. project eventually deployed at 
-<a href="https://gh-recipes.herokuapp.com/">here</a>">
+<a href="https://craftstore-app.herokuapp.com/">here</a>">
 
 #### Challenges 
 The developer was constrained by time in studying and executing all the desired functionalities for the project within an 
 expected time frame. He however hopes to bring the project to completion in due course.
+
+There was a difficulty in linking the database to the heroku app for which the developer continues to work on.
 
 ### project inspiration: 
 
