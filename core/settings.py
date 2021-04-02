@@ -81,7 +81,7 @@ if development:
     }
 else:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse('postgres://qnuyfovbogjvkz:0211bdb31e197d98e1c1a883e7933664931300f0f311a30d2fb59d1a2fabe40c@ec2-52-21-153-207.compute-1.amazonaws.com:5432/d8tck84naan94q')
     }
 
 AUTH_PASSWORD_VALIDATORS = [
